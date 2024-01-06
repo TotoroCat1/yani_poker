@@ -10,7 +10,22 @@
 ```bash
 git clone https://github.com/ZhaoYaniBruker/yani_poker.git
 cd yani_poker
-py -3.11 -m virtualenv venv_yani_poker -r requirements.txt
+py -3.11 -m virtualenv venv_yani_poker
+venv_yani_poker\Scripts\pip.exe install -r requirements.txt
 ```
 
+3. Running:
 
+```bash
+venv_yani_poker\Scripts\activate.bat
+python run_report_maker.py path1 path2 
+```
+
+4. Help
+
+```bash
+venv_yani_poker\Scripts\activate.bat
+python run_report_maker.py -h
+```
+
+Have a most wonderful day.
