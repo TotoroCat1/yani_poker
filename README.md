@@ -19,6 +19,9 @@ py -3.11 -m virtualenv venv_yani_poker
 venv_yani_poker\Scripts\pip.exe install -r requirements.txt
 venv_yani_poker\Scripts\python -m ipykernel install --user --name yani_poker
 ```
+Note: running last line twice is fully OK for the same user on Windows.
+It is necessary to name the kernel yani_poker so that `nbconert` can use the proper one.
+Somehow is does not work out of the box with a virtualenv installation.
 
 3. Running:
 
