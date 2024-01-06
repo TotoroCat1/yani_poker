@@ -1,8 +1,9 @@
-1. Needed software:
-python 3.11
-virtualenv: https://medium.com/analytics-vidhya/virtual-environment-6ad5d9b6af59
+1. Dependencies:
 
-git at whatever version
+* python 3.11
+* virtualenv: https://medium.com/analytics-vidhya/virtual-environment-6ad5d9b6af59
+* git at whatever version
+
 
 2. Installation:
 
