@@ -35,13 +35,14 @@ parser.add_argument("--path_to_template_ipynb",
 args = parser.parse_args()
 
 if __name__ == "__main__":
+    print("Project path is: ", project_path)
     # The overall idea is:
     #   * read in a template ipynb file
     #   * assume first cell is empty or has default values of parameters that will be simply exchanged for our current ones.
     #   * save a modified ipynb file
     #   * re-execute the notebook and change it into a webpdf.
 
-    print(args.path1, args.path2)
+    print(f"Paths you passed in:\npath1={args.path1}\npath2={args.path2}")
 
     with open(args.path_to_template_ipynb, "r") as file_handler:
         # jupyter notebooks (ipynb) are simple json files and can be parsed as such.
@@ -56,4 +57,6 @@ if __name__ == "__main__":
         json.dump(notebook, file_handler)
 
     # --allow-chromium-download caches the downloaded chromium
-    subprocess.run(f"jupyter nbconvert --to webpdf {args.temporary_notebook_path} --allow-chromium-download --output {args.target} --execute", shell=True)
+    cmd = f'{venv_path}\Scripts\jupyter.exe nbconvert --to webpdf {args.temporary_notebook_path} --allow-chromium-download --output {args.target} --execute --ExecutePreprocessor.kernel_name="yani_poker"'
+    print(f'Running:\n{cmd}\n')
+    subprocess.run(cmd, shell=True)

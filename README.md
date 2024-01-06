@@ -17,6 +17,7 @@ git clone https://github.com/ZhaoYaniBruker/yani_poker.git
 cd yani_poker
 py -3.11 -m virtualenv venv_yani_poker
 venv_yani_poker\Scripts\pip.exe install -r requirements.txt
+venv_yani_poker\Scripts\python -m ipykernel install --user --name yani_poker
 ```
 
 3. Running:
