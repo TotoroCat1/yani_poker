@@ -7,6 +7,11 @@
 
 2. Installation:
 
+Uninstall Windows, install Linux.
+Just joking...
+
+
+Open `Command Prompt` on Windows. 
 ```bash
 git clone https://github.com/ZhaoYaniBruker/yani_poker.git
 cd yani_poker
