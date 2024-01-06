@@ -26,11 +26,23 @@ venv_yani_poker\Scripts\activate.bat
 python run_report_maker.py path1 path2 
 ```
 
+You can also make some alias to run the program directly:
+it should be under `venv_yani_poker\Scripts\run_report_maker.py`.
+
 4. Help
 
 ```bash
 venv_yani_poker\Scripts\activate.bat
 python run_report_maker.py -h
 ```
+
+5. What the script does?
+
+`run_report_maker.py` is a simple command line scripts that:
+* reads in two paths as arguments
+* reads in a template jupyter notebook 
+* modifies the FIRST CELL of that jupyter notebook to include the paths you provided
+* saves it into a temporary jupyter notebook
+* makes a webpdf out of that notebook
 
 Have a most wonderful day.
