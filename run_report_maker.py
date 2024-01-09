@@ -28,9 +28,12 @@ parser.add_argument("--temporary_notebook_path",
 parser.add_argument("--path_to_template_ipynb", 
                     type=Path,
                     help="Path to the template ipynb file.",
-                    default=project_path/"test.ipynb",
+                    default=project_path/"YaniZhao_template.ipynb",
 )
-
+parser.add_argument("--include_code", 
+                    help="Include the full input cells code.",
+                    action="store_true",
+)
 
 args = parser.parse_args()
 
@@ -58,5 +61,7 @@ if __name__ == "__main__":
 
     # --allow-chromium-download caches the downloaded chromium
     cmd = f'{venv_path}\Scripts\jupyter.exe nbconvert --to webpdf {args.temporary_notebook_path} --allow-chromium-download --output {args.target} --execute --ExecutePreprocessor.kernel_name="yani_poker"'
+    if not args.include_code:
+        cmd += " --no-input"
     print(f'Running:\n{cmd}\n')
     subprocess.run(cmd, shell=True)
