@@ -19,7 +19,7 @@ parser.add_argument("path2", type=Path, help="second report.")
 parser.add_argument("--target", 
                     type=Path,
                     help="Directory to save the final outcome.",
-                    default=project_path/"test_out")
+                    default=project_path/"pdf_report")
 parser.add_argument("--temporary_notebook_path", 
                     type=Path,
                     help="Path to the temporary notebook.",

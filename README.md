@@ -20,7 +20,7 @@ venv_yani_poker\Scripts\pip.exe install -r requirements.txt
 venv_yani_poker\Scripts\python -m ipykernel install --user --name yani_poker
 ```
 Note: running last line twice is fully OK for the same user on Windows.
-It is necessary to name the kernel yani_poker so that `nbconert` can use the proper one.
+It is necessary to name the kernel yani_poker so that `nbconvert` can use the proper one.
 Somehow is does not work out of the box with a virtualenv installation.
 
 3. Running:
@@ -43,7 +43,7 @@ python run_report_maker.py -h
 5. What the script does?
 
 `run_report_maker.py` is a simple command line scripts that:
-* reads in two paths as arguments
+* reads in two paths as arguments (attention: the code get the two paths from the first cell in the template notebook)
 * reads in a template jupyter notebook 
 * modifies the FIRST CELL of that jupyter notebook to include the paths you provided
 * saves it into a temporary jupyter notebook
