@@ -27,7 +27,8 @@ Somehow is does not work out of the box with a virtualenv installation.
 
 ```bash
 venv_yani_poker\Scripts\activate.bat
-python run_report_maker.py path1 path2 
+pip install numpy matplotlib pandas duckdb upsetplot
+python run_report_maker.py path1 path2 (example: python run_report_maker.py Spectronaut_5007.tsv Spectronaut_4994.tsv) 
 ```
 
 You can also make some alias to run the program directly:
