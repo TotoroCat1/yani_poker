@@ -28,8 +28,11 @@ Somehow is does not work out of the box with a virtualenv installation.
 ```bash
 venv_yani_poker\Scripts\activate.bat
 pip install numpy matplotlib pandas duckdb upsetplot
-python run_report_maker.py path1 path2 (example: python run_report_maker.py Spectronaut_5007.tsv Spectronaut_4994.tsv) 
+python run_report_maker.py path1 path2 
 ```
+
+Note: path1 and path2 is the paths to your .tsv files. The two example files, Spectronaut_5007.tsv and Spectronaut_4994.tsv
+are in the same folder as the code, so you can just run as: python run_report_maker.py Spectronaut_5007.tsv Spectronaut_4994.tsv
 
 You can also make some alias to run the program directly:
 it should be under `venv_yani_poker\Scripts\run_report_maker.py`.
