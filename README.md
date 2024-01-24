@@ -29,11 +29,13 @@ Note2: The import Shema for Spectronaut is `R_D_reportcol.rs`.
 
 ```bash
 venv_yani_poker\Scripts\activate.bat
-pip install numpy matplotlib pandas duckdb upsetplot (attention: you only need to run this line in the venv once)
 python run_report_maker.py path1 path2 
 ```
 
-Note3: path1 and path2 are the paths to your .tsv reports from Spectronaut. The two example files, Spectronaut_5007.tsv and Spectronaut_4994.tsv
+Note3: if it is the first time to use your virtualenv, you need to run on `Command Prompt`: pip install numpy matplotlib pandas duckdb upsetplot
+before the code `run_report_maker.py`. This is just used to install the necessary python tools.
+
+Note4: path1 and path2 are the paths to your .tsv reports from Spectronaut. The two example files, Spectronaut_5007.tsv and Spectronaut_4994.tsv
 are in the same folder as the code, so you can just run as: python run_report_maker.py Spectronaut_5007.tsv Spectronaut_4994.tsv
 
 You can also make some alias to run the program directly:
