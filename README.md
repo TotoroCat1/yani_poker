@@ -29,7 +29,7 @@ Note2: The import Shema for Spectronaut is `R_D_reportcol.rs`.
 
 ```bash
 venv_yani_poker\Scripts\activate.bat
-pip install numpy matplotlib pandas duckdb upsetplot
+pip install numpy matplotlib pandas duckdb upsetplot (attention: you only need to run this line in the venv once)
 python run_report_maker.py path1 path2 
 ```
 
