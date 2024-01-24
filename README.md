@@ -32,7 +32,7 @@ venv_yani_poker\Scripts\activate.bat
 python run_report_maker.py path1 path2 
 ```
 
-Note3: if it is the first time to use your virtualenv, you need to run on `Command Prompt`: pip install numpy matplotlib pandas duckdb upsetplot
+Note3: if it is the first time to use your virtualenv, you need to run: `pip install numpy matplotlib pandas duckdb upsetplot`,
 before the code `run_report_maker.py`. This is just used to install the necessary python tools.
 
 Note4: path1 and path2 are the paths to your .tsv reports from Spectronaut. The two example files, Spectronaut_5007.tsv and Spectronaut_4994.tsv
