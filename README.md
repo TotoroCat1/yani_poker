@@ -19,9 +19,11 @@ py -3.11 -m virtualenv venv_yani_poker
 venv_yani_poker\Scripts\pip.exe install -r requirements.txt
 venv_yani_poker\Scripts\python -m ipykernel install --user --name yani_poker
 ```
-Note: running last line twice is fully OK for the same user on Windows.
+Note1: running last line twice is fully OK for the same user on Windows.
 It is necessary to name the kernel yani_poker so that `nbconvert` can use the proper one.
 Somehow is does not work out of the box with a virtualenv installation.
+
+Note2: The import Shema for Spectronaut is `R_D_reportcol.rs`.
 
 3. Running:
 
@@ -29,6 +31,12 @@ Somehow is does not work out of the box with a virtualenv installation.
 venv_yani_poker\Scripts\activate.bat
 python run_report_maker.py path1 path2 
 ```
+
+Note3: if it is the first time to use your virtualenv, you need to run: `pip install numpy matplotlib pandas duckdb upsetplot`,
+before the code `run_report_maker.py`. This is just used to install the necessary python tools.
+
+Note4: path1 and path2 are the paths to your .tsv reports from Spectronaut. The two example files, Spectronaut_5007.tsv and Spectronaut_4994.tsv
+are in the same folder as the code, so you can just run as: python run_report_maker.py Spectronaut_5007.tsv Spectronaut_4994.tsv
 
 You can also make some alias to run the program directly:
 it should be under `venv_yani_poker\Scripts\run_report_maker.py`.
